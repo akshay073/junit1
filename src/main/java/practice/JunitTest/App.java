@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.Date;
+import java.util.Date;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -49,10 +49,11 @@ public class App {
 		System.out.println("Test");
 	    D1.getTitle();
 	    //Assert.assertEquals("Login",D1.getTitle());
+	    //if this validation fails then it does not proceed further, in each test only one validation is checked
 	    
 	    if(!D1.getTitle().equals("Login"))
 	    {
-	    	Date d = new Date(0);
+	    	Date d = new Date();
 	        System.out.println(d);
 	        FileWriter f = new FileWriter("C:\\Users\\aksha\\Desktop\\JunitLog.txt",true);
 	        BufferedWriter b = new BufferedWriter(f);
